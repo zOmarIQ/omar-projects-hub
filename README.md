@@ -6,9 +6,9 @@
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](#)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](#)
-[![Dependencies](https://img.shields.io/badge/dependencies-0-4DA3FF?style=flat-square)](#)
-[![License](https://img.shields.io/badge/license-MIT-9B8CFF?style=flat-square)](LICENSE)
-[![GitHub Pages](https://img.shields.io/badge/deploy-GitHub%20Pages-E9B44C?style=flat-square&logo=github&logoColor=white)](https://zomariq.github.io/omar-projects-hub/)
+[![Dependencies](https://img.shields.io/badge/dependencies-0-5AA9FF?style=flat-square)](#)
+[![License](https://img.shields.io/badge/license-MIT-A79BFF?style=flat-square)](LICENSE)
+[![GitHub Pages](https://img.shields.io/badge/deploy-GitHub%20Pages-EFBB5C?style=flat-square&logo=github&logoColor=white)](https://zomariq.github.io/omar-projects-hub/)
 
 ---
 
@@ -18,8 +18,9 @@
 
 - **صفر اعتماديات** — لا يوجد `npm install`، ولا إطار عمل، ولا خطوة بناء (build step).
 - **الأيقونات مدمجة** — أيقونات Lucide مرسومة كـ SVG داخل الملف نفسه، بدون CDN خارجي.
-- **الخطوط من Google Fonts** — عائلة `Reem Kufi` للعناوين و`IBM Plex Sans Arabic` للنصوص.
-- **واجهة عربية RTL** بالكامل مع تصميم Dark Mode ومؤثرات تفاعلية.
+- **الخطوط من Google Fonts** — عائلة `Amiri` (خط نسخي) للعناوين وأسماء المشاريع، و`IBM Plex Sans Arabic` للنصوص والأزرار.
+- **واجهة عربية RTL** بالكامل بتصميم داكن.
+- **بدون JavaScript** — كل التفاعل والحركة في الصفحة مبنيّان بـ CSS وحده.
 
 الملف الوحيد الجاهز للنشر هو `index.html`، وتنشره GitHub Pages كما هو.
 
@@ -40,13 +41,13 @@
 ## المميزات
 
 - **تصميم متجاوب بالكامل** — يعمل من شاشات 320px (الجوال) حتى الشاشات الكبيرة.
-- **بطاقات تفاعلية** — كل بطاقة كاملة قابلة للنقر، مع ارتفاع خفيف عند المرور بالماوس.
-- **مؤثر ضوئي يتبع المؤشر** — إضاءة دائرية داخل البطاقة بلون المشروع نفسه.
-- **شريط لوني (Rail)** على حافة كل بطاقة يرسم نفسه عند تحميل الصفحة.
+- **صفوف كاملة قابلة للنقر** — كل صف مشروع هو رابط واحد، مع ارتفاع خفيف عند المرور بالماوس.
+- **عمود لوني على الحافة** — شريط بلون المشروع يزداد عرضه عند المرور بالماوس.
+- **زر إجراء يمتلئ بلون المشروع** عند المرور بالماوس.
 - **لون مميّز لكل مشروع** — أزرق للقبول، بنفسجي لأداة المطوّرين، ذهبي لبطاقة التخرج.
-- **شعار دائري ثلاثي الألوان** — يمثّل المشاريع الثلاثة مجتمعة في شعار واحد.
+- **شعار دائري ثلاثي الألوان** — يمثّل المشاريع الثلاثة مجتمعة، ويرسم نفسه مرة واحدة عند تحميل الصفحة. هذه هي لحظة الحركة الوحيدة في الصفحة.
 - **احترام تفضيلات المستخدم** — يتوقف الأنيميشن تلقائياً عند تفعيل `prefers-reduced-motion`.
-- **إمكانية وصول عالية** — تنقل كامل بلوحة المفاتيح، تباين ألوان مطابق لمعايير AA، وأسماء وصفية للروابط.
+- **إمكانية وصول عالية** — تنقل كامل بلوحة المفاتيح، رابط تخطٍّ، تباين ألوان مطابق لمعايير AA، وأسماء وصفية للروابط.
 
 ---
 
@@ -119,7 +120,7 @@ https://zomariq.github.io/omar-projects-hub/
 ## التخصيص
 
 ### تغيير روابط المشاريع
-ابحث في `index.html` عن الدومين واستبدله. كل رابط يظهر مرتين: مرة في البطاقة ومرة في التذييل.
+ابحث في `index.html` عن الدومين واستبدله. كل رابط يظهر مرة واحدة، داخل صف المشروع.
 
 ```
 meuc.omar962012.workers.dev
@@ -131,34 +132,40 @@ graduation-card1.vercel.app
 ابحث عن `zOmarIQ` واستبدله باسم المستخدم الجديد في الموضعين (الهيدر والتذييل).
 
 ### تغيير ألوان المشاريع
-كل بطاقة تحمل متغيّر `--accent` الخاص بها داخل وسم البطاقة:
+الألوان الثلاثة معرّفة في `:root`، وكل صف يستدعيها بمتغيّرَي `--accent` و`--accent-rgb`:
 
-```html
-<a class="card" style="--accent:#4DA3FF" href="...">
+```css
+:root{
+  --azure:#5AA9FF;  --azure-rgb:90,169,255;
+  --iris:#A79BFF;   --iris-rgb:167,155,255;
+  --brass:#EFBB5C;  --brass-rgb:239,187,92;
+}
+.row--1{ --accent:var(--azure); --accent-rgb:var(--azure-rgb) }
 ```
 
-عدّل قيمة اللون، وستتغير معها الأيقونة والشريط الجانبي والإضاءة وزر الإجراء تلقائياً.
+عدّل قيمة اللون، وستتغيّر معها الأيقونة والشريط الجانبي والحدود والظل وزر الإجراء تلقائياً.
+`--accent-rgb` مطلوب لأن الشفافية تُبنى بـ `rgba(var(--accent-rgb), .4)`.
 
 ### تغيير ألوان الواجهة العامة
 كل الألوان الأساسية معرّفة في بداية قسم `<style>` داخل `:root`:
 
 ```css
 :root{
-  --bg:          #070A12;   /* خلفية الصفحة */
-  --panel:       #0F1524;   /* خلفية البطاقات */
-  --paper:       #EAEDF6;   /* لون النص الأساسي */
-  --paper-dim:   #98A1BA;   /* النص الثانوي */
-  --azure:       #4DA3FF;
-  --iris:        #9B8CFF;
-  --brass:       #E9B44C;
+  --bg:         #0F1011;   /* خلفية الصفحة */
+  --surface:    #191A1C;   /* خلفية الصفوف */
+  --surface-hi: #202225;   /* خلفية الصف عند المرور */
+  --line:       #2B2D31;   /* الحدود */
+  --text:       #F1F2F4;   /* النص الأساسي */
+  --muted:      #A2A6AD;   /* النص الثانوي */
+  --faint:      #8A8F98;   /* نص التذييل */
 }
 ```
 
 ### تغيير الخطوط
-عدّل رابط Google Fonts في `<head>`، ثم حدّث `font-family` في `body` وفي `.hero__title`.
+عدّل رابط Google Fonts في `<head>`، ثم حدّث المتغيّرين `--display` (العناوين) و`--body` (النصوص) في `:root`.
 
 ### تغيير الأيقونات
-الأيقونات معرّفة كـ `<symbol>` داخل وسم `<svg class="sprite">` في بداية `<body>`.
+الأيقونات معرّفة كـ `<symbol>` داخل وسم `<svg class="sprite">` في نهاية `<body>`.
 لإضافة أيقونة جديدة: انسخ مسارها من [lucide.dev](https://lucide.dev) والصقه كـ `<symbol>`، ثم استدعها بـ:
 
 ```html
@@ -169,14 +176,14 @@ graduation-card1.vercel.app
 
 ## إضافة مشروع رابع
 
-انسخ أي بطاقة كاملة (`<a class="card">...</a>`) والصقها في قسم `.projects`، ثم:
+انسخ أي صف كامل (`<a class="row row--1">...</a>`) والصقه في قسم `.projects`، ثم:
 
-1. غيّر `--accent` إلى لون جديد.
+1. أضف صنفاً جديداً `row--4` في CSS واربطه بلون: `.row--4{ --accent:var(--azure); --accent-rgb:var(--azure-rgb) }`.
 2. غيّر `href` إلى رابط المشروع.
 3. حدّث العنوان والوصف والأيقونة.
-4. أضف رابطاً في التذييل.
+4. أضف قوساً رابعاً للشعار إن أردت أن يبقى الشعار معبّراً عن عدد المشاريع.
 
-التنسيق يتم بشكل تلقائي — لا حاجة لتعديل أي CSS.
+التنسيق يتم بشكل تلقائي — لا حاجة لتعديل أي CSS آخر.
 
 ---
 
@@ -184,20 +191,21 @@ graduation-card1.vercel.app
 
 | التقنية | الاستخدام |
 |---------|-----------|
-| HTML5 | البنية الدلالية (`header`, `main`, `footer`, `nav`) |
-| CSS3 | متغيرات CSS، Grid، Flexbox، `color-mix()`، طبقات الخلفية |
-| Vanilla JavaScript | مؤثر الإضاءة التابعة للمؤشر، وتحديث سنة التذييل |
-| SVG | أيقونات Lucide وشعار الصفحة والأيقونة المفضّلة (favicon) |
-| Google Fonts | `Reem Kufi` + `IBM Plex Sans Arabic` |
+| HTML5 | البنية الدلالية (`header`, `main`, `footer`, `section`) |
+| CSS3 | متغيرات CSS، Grid، Flexbox، `clamp()`، حركات CSS |
+| SVG | أيقونات Lucide، شعار الصفحة، والأيقونة المفضّلة (favicon) |
+| Google Fonts | `Amiri` + `IBM Plex Sans Arabic` |
+
+لا توجد أي مكتبة JavaScript ولا أي خطوة بناء.
 
 ### المتصفحات المدعومة
-يعمل على كل المتصفحات الحديثة. يعتمد التصميم على `color-mix()` المتوفر في:
+الصفحة لا تستخدم `color-mix()` ولا أي JavaScript. تعتمد على `overflow: clip` و`clamp()` و`inset-inline`:
 
-- Chrome / Edge 111+
-- Safari 16.2+
-- Firefox 113+
+- Chrome / Edge 90+
+- Safari 16+
+- Firefox 85+
 
-على المتصفحات الأقدم تعمل الصفحة بشكل كامل، لكن بدون الإضاءة الملوّنة داخل البطاقات (تدرّج آمن).
+على المتصفحات الأقدم تعمل الصفحة بشكل كامل، مع فروق بسيطة في تفاصيل التنسيق فقط.
 
 ---
 
