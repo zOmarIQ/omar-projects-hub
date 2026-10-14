@@ -123,10 +123,7 @@ svg{ display:block; }
 }
 
 .bg-glow{
-  background:
-    radial-gradient(52% 40% at 50% -4%, rgba(77,163,255,.20), transparent 70%),
-    radial-gradient(40% 32% at 90% 10%, rgba(155,140,255,.11), transparent 72%),
-    radial-gradient(38% 30% at 4% 26%, rgba(233,180,76,.07), transparent 74%);
+  background:radial-gradient(58% 42% at 50% -6%, rgba(77,163,255,.17), transparent 70%);
 }
 
 .bg-grain{
@@ -257,8 +254,6 @@ main{ flex:1; position:relative; z-index:1; }
   text-decoration:none;
   color:inherit;
 
-  animation:rise .55s var(--ease) backwards;
-  animation-delay:var(--d, 0ms);
   transition:
     transform .45s var(--ease),
     border-color .45s var(--ease),
@@ -286,7 +281,7 @@ main{ flex:1; position:relative; z-index:1; }
   opacity:.5;
   background:linear-gradient(180deg, var(--accent), color-mix(in srgb, var(--accent) 25%, transparent));
   transform-origin:top;
-  animation:railIn .7s var(--ease) backwards;
+  animation:railIn .6s var(--ease) backwards;
   animation-delay:var(--d, 0ms);
   transition:opacity .4s var(--ease);
 }
@@ -312,12 +307,6 @@ main{ flex:1; position:relative; z-index:1; }
   min-width:0;
   display:flex;
   flex-direction:column;
-}
-
-.card__kind{
-  font-size:.73rem;
-  font-weight:500;
-  color:var(--paper-faint);
 }
 
 .card__title{
@@ -447,19 +436,14 @@ main{ flex:1; position:relative; z-index:1; }
 }
 
 /* ---- 9. Motion ------------------------------------------- */
-@keyframes rise{
-  from{ opacity:0; transform:translateY(14px); }
-  to  { opacity:1; transform:none; }
-}
-
 @keyframes railIn{
   from{ transform:scaleY(0); }
   to  { transform:scaleY(1); }
 }
 
-.projects > .card:nth-child(1){ --d:40ms; }
-.projects > .card:nth-child(2){ --d:130ms; }
-.projects > .card:nth-child(3){ --d:220ms; }
+.projects > .card:nth-child(1){ --d:0ms; }
+.projects > .card:nth-child(2){ --d:90ms; }
+.projects > .card:nth-child(3){ --d:180ms; }
 
 /* ---- 10. Responsive -------------------------------------- */
 @media (max-width:820px){
@@ -576,7 +560,6 @@ main{ flex:1; position:relative; z-index:1; }
       <span class="card__rail" aria-hidden="true"></span>
       <span class="card__tile" aria-hidden="true"><svg><use href="#i-shield"></use></svg></span>
       <span class="card__text">
-        <span class="card__kind">نظام استرشادي</span>
         <span class="card__title">فحص القبول الجامعي</span>
         <span class="card__desc">
           تحقّق من أهلية قبولك في أقسام كلية الشرق الأوسط الجامعة، وفق الحدود الدنيا للعام الدراسي
@@ -597,7 +580,6 @@ main{ flex:1; position:relative; z-index:1; }
       <span class="card__rail" aria-hidden="true"></span>
       <span class="card__tile" aria-hidden="true"><svg><use href="#i-terminal"></use></svg></span>
       <span class="card__text">
-        <span class="card__kind">أداة مطوّرين</span>
         <span class="card__title">Valid Worker</span>
         <span class="card__desc">
           أداة خدمية تعمل على <bdi>Cloudflare Workers</bdi>، مخصّصة للتحقّق والمعالجة السريعة.
@@ -617,7 +599,6 @@ main{ flex:1; position:relative; z-index:1; }
       <span class="card__rail" aria-hidden="true"></span>
       <span class="card__tile" aria-hidden="true"><svg><use href="#i-sparkles"></use></svg></span>
       <span class="card__text">
-        <span class="card__kind">تصميم تفاعلي</span>
         <span class="card__title">بطاقة التخرج التفاعلية</span>
         <span class="card__desc">
           تصميم ويب احتفالي لبطاقة تخرّج، بتأثيرات بصرية وحركة مخصّصة للمناسبة.
