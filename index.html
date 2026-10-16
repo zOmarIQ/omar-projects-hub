@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Omar's Projects Hub — ثلاثة مشاريع في رابط واحد</title>
-<meta name="description" content="مركز يجمع ثلاثة مشاريع: فحص القبول الجامعي، Valid Worker، وبطاقة التخرج التفاعلية. روابط مباشرة تفتح في تبويب جديد.">
+<title>Omar's Projects Hub — أربعة مشاريع في رابط واحد</title>
+<meta name="description" content="مركز يجمع أربعة مشاريع: فحص القبول الجامعي، Valid Worker، بطاقة التخرج التفاعلية، وسجل الصادر. روابط مباشرة تفتح في تبويب جديد.">
 <meta name="theme-color" content="#0F1011">
 <meta name="color-scheme" content="dark">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Omar's Projects Hub">
-<meta property="og:description" content="ثلاثة مشاريع في رابط واحد: فحص القبول الجامعي، Valid Worker، وبطاقة التخرج التفاعلية.">
+<meta property="og:description" content="أربعة مشاريع في رابط واحد: فحص القبول الجامعي، Valid Worker، بطاقة التخرج التفاعلية، وسجل الصادر.">
 <meta property="og:locale" content="ar_AR">
 <meta name="twitter:card" content="summary">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230F1011'/%3E%3Cg transform='rotate(-90 16 16)' fill='none' stroke-width='2.6' stroke-linecap='round'%3E%3Ccircle cx='16' cy='16' r='9' stroke='%235AA9FF' stroke-dasharray='14.54 4.31'/%3E%3Ccircle cx='16' cy='16' r='9' stroke='%23A79BFF' stroke-dasharray='14.54 4.31' stroke-dashoffset='-18.85'/%3E%3Ccircle cx='16' cy='16' r='9' stroke='%23EFBB5C' stroke-dasharray='14.54 4.31' stroke-dashoffset='-37.7'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230F1011'/%3E%3Cg transform='rotate(-90 16 16)' fill='none' stroke-width='2.6' stroke-linecap='round'%3E%3Ccircle cx='16' cy='16' r='9' stroke='%235AA9FF' stroke-dasharray='10.91 3.23'/%3E%3Ccircle cx='16' cy='16' r='9' stroke='%23A79BFF' stroke-dasharray='10.91 3.23' stroke-dashoffset='-14.14'/%3E%3Ccircle cx='16' cy='16' r='9' stroke='%23EFBB5C' stroke-dasharray='10.91 3.23' stroke-dashoffset='-28.27'/%3E%3Ccircle cx='16' cy='16' r='9' stroke='%2357D9A3' stroke-dasharray='10.91 3.23' stroke-dashoffset='-42.41'/%3E%3C/g%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,6 +36,7 @@
   --azure:#5AA9FF;  --azure-rgb:90,169,255;
   --iris:#A79BFF;   --iris-rgb:167,155,255;
   --brass:#EFBB5C;  --brass-rgb:239,187,92;
+  --jade:#57D9A3;   --jade-rgb:87,217,163;
   --on-accent:#0F1011;
 
   --display:"Amiri",Georgia,"Times New Roman",serif;
@@ -172,8 +173,9 @@ h1,p{ margin:0 }
   animation:draw .85s var(--ease) backwards;
 }
 .arc-1{ stroke:var(--azure); animation-delay:0ms }
-.arc-2{ stroke:var(--iris);  animation-delay:120ms }
-.arc-3{ stroke:var(--brass); animation-delay:240ms }
+.arc-2{ stroke:var(--iris);  animation-delay:90ms }
+.arc-3{ stroke:var(--brass); animation-delay:180ms }
+.arc-4{ stroke:var(--jade);  animation-delay:270ms }
 
 /* ---------- projects ---------- */
 .projects{
@@ -223,6 +225,7 @@ h1,p{ margin:0 }
 .row--1{ --accent:var(--azure); --accent-rgb:var(--azure-rgb) }
 .row--2{ --accent:var(--iris);  --accent-rgb:var(--iris-rgb) }
 .row--3{ --accent:var(--brass); --accent-rgb:var(--brass-rgb) }
+.row--4{ --accent:var(--jade);  --accent-rgb:var(--jade-rgb) }
 
 .row__body{ display:block; min-width:0 }
 .row__head{ display:flex; align-items:center; gap:12px; margin-bottom:7px }
@@ -323,9 +326,10 @@ h1,p{ margin:0 }
     <a class="brand" href="./">
       <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
         <g transform="rotate(-90 16 16)" fill="none" stroke-width="2.6" stroke-linecap="round">
-          <circle cx="16" cy="16" r="9" stroke="#5AA9FF" stroke-dasharray="14.54 4.31"/>
-          <circle cx="16" cy="16" r="9" stroke="#A79BFF" stroke-dasharray="14.54 4.31" stroke-dashoffset="-18.85"/>
-          <circle cx="16" cy="16" r="9" stroke="#EFBB5C" stroke-dasharray="14.54 4.31" stroke-dashoffset="-37.7"/>
+          <circle cx="16" cy="16" r="9" stroke="#5AA9FF" stroke-dasharray="10.91 3.23"/>
+          <circle cx="16" cy="16" r="9" stroke="#A79BFF" stroke-dasharray="10.91 3.23" stroke-dashoffset="-14.14"/>
+          <circle cx="16" cy="16" r="9" stroke="#EFBB5C" stroke-dasharray="10.91 3.23" stroke-dashoffset="-28.27"/>
+          <circle cx="16" cy="16" r="9" stroke="#57D9A3" stroke-dasharray="10.91 3.23" stroke-dashoffset="-42.41"/>
         </g>
       </svg>
       <span class="brand__name">Omar's Projects Hub</span>
@@ -341,14 +345,15 @@ h1,p{ margin:0 }
 <main>
   <section class="wrap hero">
     <div class="hero__text">
-      <h1>ثلاثة مشاريع في رابط واحد</h1>
+      <h1>أربعة مشاريع في رابط واحد</h1>
       <p class="hero__lead">اختر مشروعاً وافتحه مباشرة في تبويب جديد.</p>
     </div>
 
     <svg class="hero__mark" viewBox="0 0 200 200" aria-hidden="true">
-      <path class="arc-1" pathLength="1" d="M100 18 A82 82 0 0 1 181.92 103.72"/>
-      <path class="arc-2" pathLength="1" d="M171.01 141 A82 82 0 0 1 55.82 169.08"/>
-      <path class="arc-3" pathLength="1" d="M28.99 141 A82 82 0 0 1 62.32 27.17"/>
+      <path class="arc-1" pathLength="1" d="M100 18 A82 82 0 0 1 176.76 71.15"/>
+      <path class="arc-2" pathLength="1" d="M182 100 A82 82 0 0 1 128.85 176.76"/>
+      <path class="arc-3" pathLength="1" d="M100 182 A82 82 0 0 1 23.24 128.85"/>
+      <path class="arc-4" pathLength="1" d="M18 100 A82 82 0 0 1 71.15 23.24"/>
     </svg>
   </section>
 
@@ -396,6 +401,20 @@ h1,p{ margin:0 }
       </span>
     </a>
 
+    <a class="row row--4" href="https://outgoing-register.vercel.app/" target="_blank" rel="noopener noreferrer">
+      <span class="row__body">
+        <span class="row__head">
+          <svg class="row__icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clipboard"></use></svg>
+          <span class="row__name">سجل الصادر</span>
+        </span>
+        <span class="row__desc">سجل إلكتروني للكتب الصادرة من قسم التسجيل وشؤون الطلبة: ترقيم وتاريخ تلقائي، بحث وتصفية، وأرشفة نسخة مصوّرة من كل كتاب.</span>
+      </span>
+      <span class="row__action">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-external"></use></svg>
+        <span>افتح المشروع</span>
+      </span>
+    </a>
+
   </section>
 </main>
 
@@ -423,6 +442,11 @@ h1,p{ margin:0 }
     <path d="M15 3h6v6"/>
     <path d="M10 14 21 3"/>
     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+  </symbol>
+  <symbol id="i-clipboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect width="8" height="4" x="8" y="2" rx="1" ry="1"/>
+    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+    <path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/>
   </symbol>
   <symbol id="i-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
