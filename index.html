@@ -172,10 +172,13 @@ h1,p{ margin:0 }
   stroke-dashoffset:0;
   animation:draw .85s var(--ease) backwards;
 }
-.arc-1{ stroke:var(--azure); animation-delay:0ms }
-.arc-2{ stroke:var(--iris);  animation-delay:90ms }
-.arc-3{ stroke:var(--brass); animation-delay:180ms }
-.arc-4{ stroke:var(--jade);  animation-delay:270ms }
+/* Two classes in the selector, so these outrank `.hero__mark path`
+   (one class + one type). With a bare `.arc-N` selector, the `animation`
+   shorthand above would reset the delay and all arcs would draw at once. */
+.hero__mark .arc-1{ stroke:var(--azure); animation-delay:0ms }
+.hero__mark .arc-2{ stroke:var(--iris);  animation-delay:90ms }
+.hero__mark .arc-3{ stroke:var(--brass); animation-delay:180ms }
+.hero__mark .arc-4{ stroke:var(--jade);  animation-delay:270ms }
 
 /* ---------- projects ---------- */
 .projects{
